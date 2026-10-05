@@ -1,0 +1,27 @@
+# Dataset
+data/
+
+# Trained models
+checkpoints/
+*.pt
+*.pth
+*.onnx
+*.ckpt
+
+# Outputs
+hybrid_output/
+segmentation_output/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
