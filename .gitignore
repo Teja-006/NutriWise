@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Model checkpoints
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# ITD dataset images
+ITD/train/**/*.jpg
+ITD/train/**/*.jpeg
+ITD/train/**/*.png
+ITD/train/**/*.JPG
+ITD/train/**/*.JPEG
+ITD/train/**/*.PNG
+
+ITD/test/**/*.jpg
+ITD/test/**/*.jpeg
+ITD/test/**/*.png
+ITD/test/**/*.JPG
+ITD/test/**/*.JPEG
+ITD/test/**/*.PNG
+
+# Generated masks
+ITD/train/masks/
+ITD/test/masks/
+
+# Generated output images
+*_mask.png
+*_overlay.jpg
+*_comparison.jpg
