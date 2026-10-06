@@ -50,8 +50,8 @@ import torch.nn.functional as F
 from PIL import Image
 
 from food_classes import CLASSES, NUM_CLASSES as DEFAULT_NUM_CLASSES
-from NutriWise.backend.food_weight_lookup import FOOD_PROPERTIES
-from NutriWise.backend.predict_food_multiclass_fixed import get_device, load_model, preprocess, detect_items
+from food_weight_lookup import FOOD_PROPERTIES
+from predict_food_multiclass_fixed import get_device, load_model, preprocess, detect_items
 
 PLATE_DIAMETER_CM = 27.5
 HEIGHT_SCALE_CM = 3.0

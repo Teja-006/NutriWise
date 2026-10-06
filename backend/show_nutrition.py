@@ -14,8 +14,8 @@ Usage:
 import argparse
 import os
 
-from NutriWise.backend.estimate_weight import estimate_weights, PLATE_DIAMETER_CM, HEIGHT_SCALE_CM
-from NutriWise.backend.food_nutrition import nutrition_for, FIELDS
+from estimate_weight import estimate_weights, PLATE_DIAMETER_CM, HEIGHT_SCALE_CM
+from food_nutrition import nutrition_for, FIELDS
 
 
 def ask_image_path():
