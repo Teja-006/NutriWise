@@ -1,0 +1,95 @@
+/* Append to your main stylesheet. Uses currentColor / neutral tones so it
+   fits your existing theme; adjust colors to your palette variables. */
+.analyze-page { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+.upload-box {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 280px; margin: 28px 0 16px; cursor: pointer;
+  border: 2px dashed rgba(0,0,0,.25); border-radius: 24px; overflow: hidden;
+  background: rgba(0,0,0,.02); transition: border-color .2s, background .2s;
+}
+.upload-box:hover { border-color: rgba(0,0,0,.5); background: rgba(0,0,0,.04); }
+.upload-empty { display: grid; gap: 6px; text-align: center; padding: 24px; }
+.upload-icon { font-size: 40px; line-height: 1; }
+.upload-preview { width: 100%; max-height: 420px; object-fit: contain; display: block; }
+.analyze-actions { display: flex; align-items: center; justify-content: flex-end; gap: 16px; flex-wrap: wrap; }
+.change-photo { cursor: pointer; }
+.analyze-error { color: #b3261e; margin: 8px 0; }
+.analyze-note { opacity: .65; font-size: 14px; margin-top: 12px; }
+.result-card { margin-top: 28px; padding: 20px; border-radius: 20px; border: 1px solid rgba(0,0,0,.12); }
+.result-scroll { overflow-x: auto; }
+.result-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.result-table th, .result-table td { padding: 10px 8px; text-align: right; white-space: nowrap; }
+.result-table th:first-child, .result-table td:first-child { text-align: left; }
+.result-table thead th { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; opacity: .6; }
+.result-table tbody tr { border-top: 1px solid rgba(0,0,0,.08); }
+.result-table tfoot td { border-top: 2px solid rgba(0,0,0,.35); font-weight: 700; }
+/* Append to your main stylesheet (after analyze.css). */
+.dash-page { min-height: 100vh; }
+.dash-header { display: flex; align-items: center; padding: 20px 28px; }
+.dash-layout {
+  display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 32px;
+  max-width: 1180px; margin: 0 auto; padding: 8px 24px 80px; align-items: start;
+}
+.dash-main { min-width: 0; }
+.dash-panel {
+  position: sticky; top: 20px; padding: 20px; border-radius: 22px;
+  border: 1px solid rgba(0,0,0,.12); background: rgba(0,0,0,.02);
+  max-height: calc(100vh - 40px); overflow-y: auto;
+}
+.dash-panel-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.dash-panel-top h2 { font-size: 18px; margin: 0; }
+.dash-new {
+  border: 1px solid rgba(0,0,0,.25); background: transparent; border-radius: 999px;
+  padding: 6px 12px; font: inherit; font-size: 13px; cursor: pointer; white-space: nowrap;
+}
+.dash-new:hover { background: rgba(0,0,0,.06); }
+.dash-today {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin: 16px 0; padding: 12px 14px; border-radius: 14px; background: rgba(0,0,0,.05); font-size: 14px;
+}
+.dash-today strong { font-size: 18px; }
+.dash-empty { opacity: .6; font-size: 14px; }
+.dash-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.dash-meal {
+  width: 100%; display: flex; gap: 12px; align-items: center; text-align: left;
+  padding: 10px; border-radius: 16px; border: 1px solid transparent;
+  background: rgba(0,0,0,.03); cursor: pointer; font: inherit; color: inherit;
+}
+.dash-meal:hover { background: rgba(0,0,0,.07); }
+.dash-meal.active { border-color: rgba(0,0,0,.45); background: rgba(0,0,0,.08); }
+.dash-meal img, .dash-thumb-empty {
+  width: 56px; height: 56px; border-radius: 12px; object-fit: cover; flex: none;
+  display: grid; place-items: center; background: rgba(0,0,0,.08);
+}
+.dash-meal-info { display: grid; gap: 2px; min-width: 0; }
+.dash-meal-info small { opacity: .6; font-size: 12px; }
+.dash-meal-info strong { font-size: 15px; }
+.dash-meal-info em {
+  font-style: normal; opacity: .7; font-size: 12px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.dash-clear {
+  margin-top: 14px; width: 100%; background: transparent; border: 0; opacity: .55;
+  font: inherit; font-size: 13px; cursor: pointer; text-decoration: underline;
+}
+.dash-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
+.dash-stat {
+  display: grid; gap: 2px; padding: 16px; border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.12); background: rgba(0,0,0,.02);
+}
+.dash-stat.big { grid-column: 1 / -1; padding: 22px; }
+.dash-stat span { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; opacity: .6; }
+.dash-stat strong { font-size: 28px; line-height: 1.1; }
+.dash-stat.big strong { font-size: 52px; }
+.dash-stat small { opacity: .6; }
+.dash-items { margin: 8px 0 16px; }
+.dash-items h3 { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; opacity: .6; margin-bottom: 8px; }
+.dash-item {
+  display: grid; grid-template-columns: 1fr auto auto; gap: 16px;
+  padding: 10px 0; border-top: 1px solid rgba(0,0,0,.08); font-size: 15px;
+}
+.dash-item span:not(:first-child) { text-align: right; opacity: .8; min-width: 64px; }
+@media (max-width: 900px) {
+  .dash-layout { grid-template-columns: 1fr; }
+  .dash-panel { position: static; max-height: none; order: 2; }
+}

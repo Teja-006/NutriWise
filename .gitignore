@@ -1,27 +1,38 @@
-# Dataset
-data/
+# ML datasets
+ITD/
+dataset/
+datasets/
+*.zip
 
-# Trained models
-checkpoints/
-*.pt
-*.pth
-*.onnx
-*.ckpt
+# React
+node_modules/
+dist/
+.vite/
 
-# Outputs
-hybrid_output/
-segmentation_output/
-
-# Python cache
+# Python
 __pycache__/
-*.pyc
-
-# Virtual environments
+*.py[cod]
 .venv/
 venv/
+env/
 
-# Environment variables
+# Models
+checkpoints/
+*.pth
+*.pt
+
+# Environment
 .env
+.env.local
+.env.development
+.env.production
 
-# VS Code
+# macOS
+.DS_Storex
+
+# IDE
 .vscode/
+.idea/
+
+# Logs
+s*.log

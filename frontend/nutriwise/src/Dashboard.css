@@ -1,0 +1,859 @@
+.dashboard {
+  min-height: 100vh;
+  background: #f8f8f3;
+  color: #111;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+/* HEADER */
+
+.dashboard-header {
+  height: 76px;
+  padding: 0 5vw;
+
+  border-bottom: 1px solid #deded7;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #f8f8f3;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand-mark {
+  width: 27px;
+  height: 27px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #9df23d;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.date-navigation {
+  height: 42px;
+  padding: 0 7px;
+
+  border: 1px solid #deded7;
+  border-radius: 24px;
+
+  background: #f1f1eb;
+
+  display: flex;
+  align-items: center;
+}
+
+.date-navigation button {
+  width: 34px;
+  height: 34px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: transparent;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.date-navigation button:hover {
+  background: #e5e5de;
+}
+
+.date-input {
+  width: 145px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  text-align: center;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* CONTENT */
+
+.dashboard-content {
+  width: min(980px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 65px 0 80px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 275px;
+
+  gap: 40px;
+
+  align-items: start;
+}
+
+.main-column {
+  min-width: 0;
+}
+
+.date-label {
+  margin-bottom: 12px;
+
+  color: #719b40;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.main-column h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 72px);
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  font-weight: 800;
+}
+
+.summary-description {
+  margin: 18px 0 40px;
+
+  color: #85857d;
+
+  font-size: 15px;
+}
+
+/* ERROR */
+
+.error-message {
+  margin-bottom: 20px;
+  padding: 14px 16px;
+
+  border: 1px solid #e2b7b7;
+  border-radius: 12px;
+
+  background: #fff3f3;
+
+  color: #9a3030;
+
+  font-size: 13px;
+}
+
+/* NUTRITION */
+
+.nutrition-summary {
+  margin-bottom: 38px;
+}
+
+.calorie-card,
+.macro-card {
+  border: 1px solid #deded7;
+
+  background: #fafaf6;
+}
+
+.calorie-card {
+  min-height: 155px;
+
+  padding: 24px 26px;
+
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.metric-label {
+  display: block;
+
+  color: #85857d;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.calorie-card strong {
+  margin-top: 7px;
+
+  font-size: 48px;
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+.metric-unit {
+  margin-top: 7px;
+
+  color: #85857d;
+
+  font-size: 12px;
+}
+
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 9px;
+
+  margin-top: 9px;
+}
+
+.macro-card {
+  min-height: 95px;
+
+  padding: 17px;
+
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.macro-card strong {
+  margin-top: 8px;
+
+  font-size: 27px;
+  line-height: 1;
+
+  letter-spacing: -1px;
+}
+
+/* MEALS */
+
+.meal-sections {
+  border-top: 1px solid #deded7;
+}
+
+.meal-section {
+  padding: 27px 0 30px;
+
+  border-bottom: 1px solid #deded7;
+}
+
+.meal-section-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 17px;
+}
+
+.meal-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.section-number {
+  color: #999991;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.meal-heading h2 {
+  margin: 0;
+
+  font-size: 23px;
+
+  letter-spacing: -0.8px;
+}
+
+.picture-button {
+  height: 34px;
+
+  padding: 0 15px;
+
+  border: 1px solid #d2d2ca;
+  border-radius: 18px;
+
+  background: transparent;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.picture-button:hover {
+  background: #ededE6;
+}
+
+.picture-button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+/* EMPTY */
+
+.picture-upload-box {
+  width: 100%;
+
+  min-height: 72px;
+
+  padding: 13px 15px;
+
+  border: 1px dashed #d4d4cc;
+  border-radius: 15px;
+
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.picture-upload-box:hover {
+  background: #f1f1eb;
+
+  border-color: #babbb2;
+}
+
+.picture-icon {
+  width: 36px;
+  height: 36px;
+
+  margin-right: 13px;
+
+  border-radius: 50%;
+
+  background: #9df23d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+}
+
+.picture-upload-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.picture-upload-content strong {
+  font-size: 13px;
+}
+
+.picture-upload-content span {
+  color: #96968d;
+
+  font-size: 11px;
+}
+
+.picture-arrow {
+  width: 30px;
+  height: 30px;
+
+  margin-left: auto;
+
+  border-radius: 50%;
+
+  background: #ecece5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+/* LOGGED MEAL */
+
+.logged-meals {
+  display: flex;
+  flex-direction: column;
+}
+
+.logged-meal {
+  padding: 17px 0;
+
+  border-bottom: 1px solid #e1e1da;
+}
+
+.logged-meal:first-child {
+  padding-top: 8px;
+}
+
+.logged-meal-top {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.logged-meal-title {
+  font-size: 14px;
+
+  font-weight: 750;
+}
+
+.logged-meal-weight {
+  margin-top: 4px;
+
+  color: #94948c;
+
+  font-size: 12px;
+}
+
+.logged-meal-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.logged-meal-calories {
+  font-size: 14px;
+
+  font-weight: 750;
+
+  white-space: nowrap;
+}
+
+.delete-meal {
+  width: 25px;
+  height: 25px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #999;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.delete-meal:hover {
+  color: #111;
+}
+
+.food-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 11px;
+
+  padding-right: 20px;
+}
+
+.food-tag {
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  background: #e9e9e2;
+
+  color: #717169;
+
+  font-size: 10px;
+
+  line-height: 1;
+}
+
+.meal-macro-row {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 13px;
+
+  margin-top: 10px;
+
+  color: #77776f;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.add-another-picture {
+  align-self: flex-start;
+
+  margin-top: 15px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #6c9c36;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.add-another-picture:hover {
+  text-decoration: underline;
+}
+
+/* HISTORY */
+
+.history-card {
+  position: sticky;
+
+  top: 25px;
+
+  padding: 20px 18px;
+
+  border: 1px solid #deded7;
+
+  border-radius: 18px;
+
+  background: #fafaf6;
+}
+
+.history-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.history-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #999991;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.history-top h3 {
+  margin: 0;
+
+  font-size: 17px;
+
+  letter-spacing: -0.5px;
+}
+
+.today-button {
+  height: 30px;
+
+  padding: 0 12px;
+
+  border: 1px solid #d5d5ce;
+
+  border-radius: 15px;
+
+  background: #efefe9;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.history-date-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #989890;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+}
+
+.history-date-input {
+  width: 100%;
+
+  height: 55px;
+
+  padding: 0 12px;
+
+  border: 1px solid #deded7;
+
+  border-radius: 13px;
+
+  background: #f0f0ea;
+
+  color: #252521;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.history-list {
+  margin-top: 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.history-item {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #d4d4cc;
+
+  border-radius: 12px;
+
+  background: #efefe9;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.history-item:hover {
+  background: #e7e7df;
+}
+
+.history-item.selected {
+  border-color: #aaa9a0;
+
+  background: #e4e4dd;
+}
+
+.history-item span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #898980;
+
+  font-size: 10px;
+}
+
+.history-item strong {
+  font-size: 12px;
+}
+
+.history-empty {
+  min-height: 115px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  color: #999990;
+
+  text-align: center;
+
+  font-size: 10px;
+}
+
+.history-plus {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: #e9e9e2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+/* FOOTER */
+
+.disclaimer {
+  margin: 22px 0 0;
+
+  color: #999990;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .dashboard-content {
+    width: min(
+      700px,
+      calc(100% - 36px)
+    );
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-card {
+    position: static;
+  }
+
+  .history-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    height: auto;
+
+    padding: 14px 18px;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .date-navigation {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  .date-input {
+    flex: 1;
+
+    width: auto;
+  }
+
+  .dashboard-content {
+    width: calc(100% - 28px);
+
+    padding: 38px 0 55px;
+  }
+
+  .dashboard-grid {
+    gap: 28px;
+  }
+
+  .main-column h1 {
+    font-size: 48px;
+
+    letter-spacing: -2.8px;
+  }
+
+  .calorie-card {
+    min-height: 125px;
+
+    padding: 20px;
+  }
+
+  .calorie-card strong {
+    font-size: 40px;
+  }
+
+  .macro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meal-section-header {
+    align-items: flex-start;
+  }
+
+  .meal-heading h2 {
+    font-size: 21px;
+  }
+
+  .logged-meal-right {
+    gap: 8px;
+  }
+
+  .logged-meal-calories {
+    font-size: 12px;
+  }
+
+  .meal-macro-row {
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .history-list {
+    grid-template-columns: 1fr;
+  }
+}

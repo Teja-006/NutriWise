@@ -2,12 +2,12 @@
 
 Source: ICVGIP 2025 paper "What is there in an Indian Thali?", Table 2.
 Mask ID == row number in that table. ID 0 is background.
-Verified by sanity checks against the ID galleries and a labeled plate
-(IDs 29, 30, 33, 34, 36, 21, 40 matched visually).
-IDs 35 and 37 are the least certain, see check notes.
+CLASSES is a dict {id: name} because the other scripts call
+CLASSES.get(...) and CLASSES.items().
+IDs 15, 35, 37, 47 (fruit-like / uncertain) should be spot-checked.
 """
 
-CLASSES = [
+CLASS_LIST = [
     "background",                        # 0
     "aloo-dry-fry",                      # 1
     "avakaya-muddha-pappu-rice",         # 2
@@ -61,10 +61,11 @@ CLASSES = [
     "semiya",                            # 50
 ]
 
+CLASSES = {i: n for i, n in enumerate(CLASS_LIST)}
 NUM_CLASSES = len(CLASSES)  # 51
 assert NUM_CLASSES == 51, f"expected 51 classes, got {NUM_CLASSES}"
 
-# Aliases so older scripts that import different names keep working.
-CLASS_NAMES = CLASSES
-ID_TO_NAME = {i: n for i, n in enumerate(CLASSES)}
-NAME_TO_ID = {n: i for i, n in enumerate(CLASSES)}
+# Extra aliases
+CLASS_NAMES = CLASS_LIST
+ID_TO_NAME = CLASSES
+NAME_TO_ID = {n: i for i, n in CLASSES.items()}
