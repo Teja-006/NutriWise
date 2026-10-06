@@ -16,11 +16,6 @@ __pycache__/
 venv/
 env/
 
-# Models
-checkpoints/
-*.pth
-*.pt
-
 # Environment
 .env
 .env.local
