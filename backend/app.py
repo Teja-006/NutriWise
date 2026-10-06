@@ -18,8 +18,8 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image, ImageOps
 
-from NutriWise.backend.estimate_weight import estimate_weights
-from NutriWise.backend.food_nutrition import nutrition_for, FIELDS
+from estimate_weight import estimate_weights
+from food_nutrition import nutrition_for, FIELDS
 
 
 # ============================================================
