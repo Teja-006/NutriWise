@@ -167,7 +167,7 @@ def load_model(
     raw = torch.load(
         weights_path,
         map_location=device,
-        weights_only=True
+        weights_only=False
     )
 
     # --------------------------------------------------------
