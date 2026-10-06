@@ -9,8 +9,10 @@ import {
 import Dashboard from "./Dashboard";
 
 const STORAGE_KEY = "nutriwise-profile";
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
-
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://nutriwise-backend-qb2i.onrender.com";
+  
 const initialProfile = {
   gender: "",
   height: "",
